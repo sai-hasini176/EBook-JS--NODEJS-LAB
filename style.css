@@ -1,0 +1,259 @@
+/* ==================== Reset & Body ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Fix full height issue */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: #f5f7fb;
+}
+
+main {
+    flex: 1;
+}
+
+/* ==================== Header ==================== */
+header.top-header {
+    background-color: #2ecc71 !important; /* SAME GREEN */
+    color: white !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.top-header .left {
+    font-size: 16px;
+}
+
+.top-header .right {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/* ==================== Sidebar ==================== */
+aside.sidebar {
+    background-color: #1f3c88 !important;
+    min-height: 100vh;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+aside.sidebar a {
+    color: white;
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+aside.sidebar a:hover {
+    background-color: #162d66;
+}
+
+aside.sidebar a.active {
+    background-color: #162d66;
+    border-left: 4px solid #2ecc71;
+}
+
+/* ==================== Cards ==================== */
+.card {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    background-color: white !important;
+    text-align: center;
+}
+
+.container-fluid {
+    padding: 0;
+}
+/* ==================== Forms ==================== */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #2ecc71;
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+    outline: none;
+}
+
+/* ==================== Buttons ==================== */
+button, .primary-btn, .danger-btn {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.primary-btn {
+    background-color: #3498db; /* SAME BLUE BUTTON */
+    color: white;
+    padding: 12px 25px;
+}
+
+.primary-btn:hover {
+    background-color: #2980b9;
+}
+
+.danger-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 25px;
+}
+
+.danger-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Logout buttons spacing */
+.btn-group {
+    gap: 10px;
+}
+
+.card .btn {
+    min-width: 140px;
+}
+
+/* ==================== Products ==================== */
+.product-card {
+    width: 280px;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ==================== Tables ==================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.cart-table-wrapper {
+    overflow-x: auto;
+}
+
+/* ==================== Footer ==================== */
+footer {
+    background-color: #111 !important; /* SAME BLACK */
+    color: white !important;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+/* ==================== Misc ==================== */
+.gender-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-link {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #2c7be5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== Floating Bill ==================== */
+.bill-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.bill-overlay:target {
+    display: flex;
+}
+
+.bill-popup {
+    background-color: white !important;
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* ==================== Validation ==================== */
+.input-error {
+    border: 2px solid #e74c3c !important;
+}
+
+.input-success {
+    border: 2px solid #2ecc71 !important;
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 768px) {
+
+    .sidebar {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+}
